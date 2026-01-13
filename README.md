@@ -84,28 +84,21 @@ Observação: Adapte os comandos conforme seu ambiente e configuração do `tsco
 +- Separar a formatação de saída (UI) da lógica de listagem, criando uma função de renderização.
 +- Persistir em arquivo ou base de dados em uma implementação futura de `ICallRepository`.
 
-  ✅ Implementações Realizadas
+---
+
+## Implementações Realizadas
 
 As partes propositalmente incompletas do projeto foram finalizadas conforme solicitado.
 
-MemoryCallRepository
+- MemoryCallRepository:
+  - Criada uma coleção interna em memória para armazenar os chamados.
+  - Implementados os métodos de criação, atualização e listagem de chamados.
+  - Atualização realizada por referência de objeto, mantendo o estado durante a execução.
 
-Foi criada uma coleção interna em memória para armazenar os chamados.
+- TextCallUI:
+  - Implementada a opção de listagem de chamados.
+  - Implementada a opção de marcar um chamado como concluído, com seleção por índice.
+  - Exibição de mensagens de sucesso ou erro ao usuário.
 
-Implementados os métodos de criação, atualização e listagem de chamados.
-
-A atualização do chamado é feita por referência de objeto, mantendo o estado durante a execução.
-
-TextCallUI
-
-Implementada a opção de listagem de chamados, exibindo solicitante, descrição e status.
-
-Implementada a opção de marcar um chamado como concluído, permitindo selecionar o chamado pelo índice.
-
-O usuário recebe feedback de sucesso ou erro após cada ação.
-
-Bootstrap (index.ts)
-
-O sistema passou a ser iniciado corretamente com a chamada do método start() da interface de usuário.
-
-A implementação respeita a arquitetura definida, os contratos das interfaces e a separação entre UI, controlador e repositório.
+- Bootstrap (index.ts):
+  - Adicionada a chamada do método `start()` para iniciar a aplicação.
